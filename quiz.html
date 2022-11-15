@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Page</title>
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet"href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        10 Questions
+                    </p>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score Chart
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        100%
+                    </h1>
+                </div>
+            </div>
+            <h1 id="Question"> What is your favorite Color? +1</h1>
+            <div class="choice-container">
+                <button class="choice-prefix" id="choice1">Red</button>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix" id="choice2">Blue</button>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix" id="choice3">Orange</button>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix" id="choice4">Pink</button>
+            </div>
+        </div>
+    </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="quiz.js"></script>
+    
+    <script>
+    let question2 = function() {
+    $("#Question").text('What is your biggest weakness? +2');
+    $("#choice1").text('Fire');
+    $("#choice2").text('Cold');
+    $("#choice3").text('Spiders');
+    $("#choice4").text('Heights');
+    $("button").on("click", question3);
+}
+
+
+let question3 = function() {
+    $("#Question").text('What sport would you play? +3');
+    $("#choice1").text('Basketball');
+    $("#choice2").text('Soccer');
+    $("#choice3").text('Football');
+    $("#choice4").text('Baseball');
+    $("button").on("click", question4);
+}
+
+let question4 = function() {
+    $("#Question").text('Favorite music genre? +4');
+    $("#choice1").text('Hip-Hop/Rap');
+    $("#choice2").text('Country');
+    $("#choice3").text('Pop');
+    $("#choice4").text('Jazz');
+    $("button").on("click", question5);
+}
+
+let question5 = function() {
+    $("#Question").text('What is your favorite season? +5');
+    $("#choice1").text('Summer');
+    $("#choice2").text('Winter');
+    $("#choice3").text('Fall');
+    $("#choice4").text('Spring');
+    $("button").on("click", question6);
+}
+
+let question6 = function() {
+    $("#Question").text('Where would you like to travel? +6');
+    $("#choice1").text('Paris');
+    $("#choice2").text('London');
+    $("#choice3").text('Hawaii');
+    $("#choice4").text('Milan');
+    $("button").on("click", question7);
+}
+
+let question7 = function() {
+    $("#Question").text('What food would you choose? +7');
+    $("#choice1").text('Burgers');
+    $("#choice2").text('Sushi');
+    $("#choice3").text('Pizza');
+    $("#choice4").text('Chicken Wings');
+    $("button").on("click", question8);
+}
+
+let question8 = function() {
+    $("#Question").text('Favorite streaming platform? +8');
+    $("#choice1").text('Netflix');
+    $("#choice2").text('Hulu');
+    $("#choice3").text('HBO Max');
+    $("#choice4").text('Disney+');
+    $("button").on("click", question9);
+}
+
+let question9 = function() { 
+    $("#Question").text('Best Social Media Platform? +9');
+    $("#choice1").text('Instagram');
+    $("#choice2").text('Twitter');
+    $("#choice3").text('Facebook');
+    $("#choice4").text('Tik-Tok');
+    $("button").on("click", question10);
+}
+
+let question10 = function() {
+    $("#Question").text('Your friends and family would best describe you as? +10');
+    $("#choice1").text('Joyful');
+    $("#choice2").text('Angry');
+    $("#choice3").text('Energetic');
+    $("#choice4").text('Quiet');
+    $("button").on("click", question11);
+}
+
+let question11 = function() {
+    $("#Question").text('Your Marvel Superhero is...');
+    $("#choice1").text('Spiderman!');
+    $("#choice2").text('Iron-Man!');
+    $("#choice3").text('Thor!');
+    $("#choice4").text('Hulk!');
+    $("h3").empty();
+    $("h1").text("Spiderman");
+    $("button").hide();
+
+}
+    
+$("button").on("click", question2);
+    </script>
+
+</body>
+</html> 
